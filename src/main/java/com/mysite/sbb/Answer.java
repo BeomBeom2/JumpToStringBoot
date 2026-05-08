@@ -18,7 +18,7 @@ public class Answer {
 
     private LocalDateTime createDate;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY) //기본적으로 ManyToOne은 EAGER로 되어있다.
     private Question question;
 
     @Column(columnDefinition = "TEXT")
